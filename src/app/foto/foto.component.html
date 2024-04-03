@@ -1,0 +1,98 @@
+<p>foto works!</p>
+<div class="card flex flex-column md:flex-row gap-3">
+  <div id="wapper" class="card">
+    <div class="formulario">
+      <h2> Cadastro <span> Usuario</span></h2>
+      <br />
+      <form id="container" name="signup-form">
+        <div>
+          <label for="nome" class="ng-binding"> foto : </label>
+          <br />
+          <input type="file" class="form-control" name="nome" (change)="onFileSelected($event)" #fileUpload
+            placeholder="nome">
+        </div>
+        <br />
+
+        <button type="submit" [useExistingCss]="true" styleSheetFile="assets/css/print-pdf.css" mat-fab printSectionId="minimal" ngxPrint class="button"> Salvar
+        </button>
+      </form>
+      <div id="minimal">
+        <div style="display: flex;flex-direction: row;max-width: 700px;max-height: 100%;">
+          <div id="esquerdo">
+            <p-image id="foto" [src]="imageurl" alt="Image" imageClass="redondo"></p-image>
+            <h1 class="nome">juliano cesar osmir hein</h1>
+            <br />
+            <p class="p1" style="width: 40px;">contato</p>
+            <p style="width: 40px;">TELEFONE:</p>
+            <p style="width: 115px;">(67) 997150500</p>
+            <p style="width: 40px;">GitHub:</p>
+            <a style="width: 150px;">https://github.com/julianoosmir</a>
+            <p style="width: 40px;">EMAIL:</p>
+            <a style="width: 150px;">Julianoosmir&#64;outlook.com</a>
+          </div>
+          <br />
+          <div id="direito" style="width: 500px;">
+            <div>
+              <p style="width: 300px;">Data de nascimento: 11/07/1999</p>
+              <p style="width: 300px;">Endereço: Rua Clementina de Jesus Nº 26 Setor 5
+                conjunto Aero Rancho, Campo Grande MS </p>
+            </div>
+            <div>
+              <p style="width: 300px;">Formação:</p>
+              <p style="width: 300px;">UNIDERP- ciência da computação </p>
+            </div>
+            <div>
+              <p style="width: 300px;">Experiência :</p>
+              <p style="width: 300px;">Programador .Net- Fácil IT - março de 2020 - janeiro
+                de 2021 - Desenvolvimento de sistema web em
+                ASP.NET Core, DevExpress, SQL Serve, Bootstrap,
+                Javascript, JQuery e Vue js.</p>
+              <p style="width: 300px;">Programador FullStack – AZTech - maio de 2021 -
+                junho de 2022 - Implementar novas funcionalidades ou
+                requisitos no sistema em desenvolvimento,Efetuar testes de unidade e de integração com outras
+                funcionalidades implementadas;
+                Efetuar deploy de pacotes de sistemas.
+              </p>
+              <p>
+                Tecnologias utilizadas: Java (versão 8), Spring boot, Liquibase, JUnit, Javascript, Vue js, Angular,
+                Docker, PostgresDB, Git, Gitlab, pipeline, CI/CD, Banco de dados Oracle, Spring MVC, Metodologías Agile,
+                Scrum, RabbitMQ
+              </p>
+              <p>
+                Desenvolvedor II - Sénior Sistemas – junho a agosto de 2022 - Desenvolvimento de ERP voltado para
+                indústria. Implementar novas funcionalidades ou requisitos no sistema em desenvolvimento, efetuando
+                testes de unidade e de integração com outras funcionalidades implementadas e deploy de pacotes de
+                sistemas.
+                Tecnologias utilizadas: Java (versão 8 e 11), Spring boot, Flyway, JUnit, Angular, Docker, PostgresDB,
+                Git, Gitlab, pipeline, CI/CD,Metodologias Agil, Scrum, RabbitMQ .
+              </p>
+              <p>
+                Analista e Desenvolvedor de sistemas - AGETEC (comissionado) - agosto de 2022 a janeiro de 2023 -
+                Sustentação e implantação de sistemas municipais.
+                Tecnologias utilizadas: Java (versão 6, 7, 8 e 11), Spring boot, Javascript/Typescript, Angular, Docker,
+                Oracle, JSP , ZK, JHipster
+                Motivo da saída : exoneração de cargos comissionados
+              </p>
+              <p>
+                Desenvolvedor Java - MJV Technology & Innovation ( alocado no Bradesco Seguros ) - Fevereiro a Julho de
+                2023 - Desenvolver e implantar sistemas informatizados dimensionando requisitos e funcionalidade do
+                sistema, especificando sua arquitetura, escolhendo ferramentas de desenvolvimento, especificando
+                programas, codificando aplicativos, administrar ambiente informatizado e elaborar documentação técnica.
+                Tecnologias utilizadas: Java (versão 6, 7, 8 e 11), Spring boot, Javascript/Typescript ,Angular, Struts,
+                JSP, JSF, Docker, Mysql, SVN, Git, Gitlab,pipeline, CI/CD.
+              </p>
+              <p>
+                Analista de desenvolvimento - GEOI2 Tecnologia da Informação LTDA. - agosto a dezembro de 2023 -
+                Sustentação e implantação de sistemas, atendendo chamado do TCE do mato grosso do sul.
+                Tecnologias utilizadas: Java (versão 17), Bancos de dados relacionais, C#, Javascript/Typescript,
+                AngularJS, Microsoft SQL Server, .NET Framework, ASP.NET, Microsoft Visual Studio, Spring boot, Angular
+                Motivo da saída : descontinuidade de profissionais com senioridade menor que sénior
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

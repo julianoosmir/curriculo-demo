@@ -1,0 +1,44 @@
+<p>dados-pessoais works!</p>
+<div class="card flex flex-column md:flex-row gap-3">
+  <div id="wapper" class="card">
+    <div class="formulario">
+    <h2> Cadastro <span> Usuario</span></h2>
+    <br />
+    <form name="signup-form">
+      <div>
+        <label for="nome" class="ng-binding"> nome : </label>
+        <br />
+        <input type="name"  pInputText class="form-control" name="nome" [(ngModel)]="nome" placeholder="nome">
+      </div>
+      <br />
+      <div>
+        <label for="nome">telefone : </label>
+        <br />
+        <input type="telefone" pInputText  name="telefone" id="telefone" [(ngModel)]="telefone"
+          aria-describedby="emailHelp" placeholder="telefone">
+      </div>
+      <br />
+      <div>
+        <label for="email">email : </label>
+        <br />
+        <input type="telefone" pInputText class="form-control" name="email" id="email" [(ngModel)]="email"
+          aria-describedby="emailHelp" placeholder="telefone">
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="site">site : </label>
+        <br />
+        <input type="site" pInputText class="form-control" name="site" [(ngModel)]="site" id="site" placeholder="site">
+      </div>
+      <br />
+      <div>
+        <label for="dataDeNascimento" >Data de nascimento: </label>
+        <br />
+        <p-calendar [(ngModel)]="dataDeNascimento" name="dataDeNascimento" id="dataDeNascimento" [showIcon]="true"></p-calendar>
+      </div>
+      <br />
+      <button type="submit" (click)="salvar()"  class="button"> Salvar </button>
+    </form>
+    </div>
+  </div>
+</div>

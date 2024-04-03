@@ -1,0 +1,53 @@
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.redondo {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  margin-left: 25px;
+}
+
+.nome {
+  font-family: "Century Gothic", "Century";
+  font-size: 70px;
+  margin: 20px;
+}
+
+#foto {
+  margin: 10px;
+}
+
+#minimal {
+  max-height: 100%;
+}
+
+#esquerdo {
+  background-color: #d9d7d7;
+  width: 500px;
+  margin-bottom: 0px;
+}
+
+#direito {
+  margin-bottom: 0px;
+  margin-left: 20px;
+}
+
+body {}
+
+.printarea {
+  visibility: visible;
+}
+
+@page {
+  margin: 0;
+  max-height: 100%;
+}
+
+* {
+  outline: none;
+  color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
