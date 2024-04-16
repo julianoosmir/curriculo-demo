@@ -1,42 +1,47 @@
-<p>experiencia works!</p>
 <div class="card flex flex-column md:flex-row gap-3">
   <div id="wapper" class="card">
     <div class="formulario">
-      <h2> Cadastro <span> Usuario</span></h2>
+      <h2> Cadastro <span> Experiencia</span></h2>
       <br />
       <form name="signup-form">
-        <div>
-          <label for="nome do cargo" class="ng-binding"> Cargo : </label>
+
+        <div class="row">
+          <div>
+            <label class="ng-binding"> Cargo : </label>
+            <br />
+            <input type="name" pInputText class="form-control" name="nome do cargo" [(ngModel)]="cargo"
+                   placeholder="nome do cargo">
+          </div>
           <br />
-          <input type="name" pInputText class="form-control" name="nome do cargo" [(ngModel)]="cargo"
-            placeholder="nome do cargo">
+          <div>
+            <label  class="ng-binding"> nome da Empresa : </label>
+            <br />
+            <input type="name" pInputText class="form-control" name="nome do Empresa" [(ngModel)]="nomeEmpresa"
+                   placeholder="nome do Empresa">
+          </div>
         </div>
         <br />
-        <div>
-          <label for="nome do Empresa" class="ng-binding"> nome da Empresa : </label>
-          <br />
-          <input type="name" pInputText class="form-control" name="nome do Empresa" [(ngModel)]="nomeEmpresa"
-            placeholder="nome do Empresa">
+
+        <div class="row">
+          <div class="calendar">
+            <label>Data de inicio: </label>
+            <br />
+            <p-calendar [(ngModel)]="dataDeInicio" name="dataDeInicio" id="dataDeInicio" [showIcon]="true"></p-calendar>
+          </div>
+          <div class="checkbox">
+            <p-checkbox  [(ngModel)]="trabalhoAqui" [binary]="true" [ngModelOptions]="{ standalone: true }"
+                         name="trabalhoAqui" inputId="binary"></p-checkbox>
+            <label> Trabalho atualmente neste cargo: </label>
+          </div>
+
+          <div class="calendar" *ngIf="!trabalhoAqui">
+            <label>Data de termino: </label>
+            <br />
+            <p-calendar [(ngModel)]="dataDeTermino" name="dataDeTermino" id="dataDeTermino"
+                        [showIcon]="true"></p-calendar>
+          </div>
         </div>
-        <br />
-        <div>
-          <label for="site">Data de inicio: </label>
-          <br />
-          <p-calendar [(ngModel)]="dataDeInicio" name="dataDeInicio" id="dataDeInicio" [showIcon]="true"></p-calendar>
-        </div>
-        <br />
-        <div>
-          <p-checkbox [(ngModel)]="trabalhoAqui" [binary]="true" [ngModelOptions]="{ standalone: true }"
-            name="trabalhoAqui" inputId="binary"></p-checkbox>
-          <label for="site"> Trabalho atualmente neste cargo: </label>
-        </div>
-        <br />
-        <div *ngIf="!trabalhoAqui">
-          <label for="site">Data de termino: </label>
-          <br />
-          <p-calendar [(ngModel)]="dataDeTermino" name="dataDeTermino" id="dataDeTermino"
-            [showIcon]="true"></p-calendar>
-        </div>
+
         <br />
         <button type="submit" (click)="salvar()" class="button"> Salvar </button>
       </form>

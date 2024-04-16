@@ -1,43 +1,50 @@
-<p>dados-pessoais works!</p>
 <div class="card flex flex-column md:flex-row gap-3">
-  <div id="wapper" class="card">
+  <div id="wapper">
     <div class="formulario">
-    <h2> Cadastro <span> Usuario</span></h2>
+    <h2> Dados <span> Pessoais</span></h2>
     <br />
-    <form name="signup-form">
+    <form>
       <div>
-        <label for="nome" class="ng-binding"> nome : </label>
+        <div>
+          <label class="ng-binding"> nome : </label>
+          <br />
+          <input type="name"  pInputText class="form-control" name="nome" [(ngModel)]="nome" placeholder="nome">
+        </div>
         <br />
-        <input type="name"  pInputText class="form-control" name="nome" [(ngModel)]="nome" placeholder="nome">
+        <div>
+          <label>telefone : </label>
+          <br />
+          <input type="telefone" pInputText  name="telefone" id="telefone" [(ngModel)]="telefone"
+                 aria-describedby="emailHelp" placeholder="telefone">
+        </div>
       </div>
-      <br />
       <div>
-        <label for="nome">telefone : </label>
+        <div>
+          <label for="email">email : </label>
+          <br />
+          <input type="telefone" pInputText class="form-control" name="email" id="email" [(ngModel)]="email"
+                 aria-describedby="emailHelp" placeholder="telefone">
+        </div>
         <br />
-        <input type="telefone" pInputText  name="telefone" id="telefone" [(ngModel)]="telefone"
-          aria-describedby="emailHelp" placeholder="telefone">
+        <div class="form-group">
+          <label for="site">site : </label>
+          <br />
+          <input type="site" pInputText class="form-control" name="site" [(ngModel)]="site" id="site" placeholder="site">
+        </div>
       </div>
-      <br />
       <div>
-        <label for="email">email : </label>
+        <div>
+          <label for="dataDeNascimento" >Data de nascimento: </label>
+          <br />
+          <p-calendar [(ngModel)]="dataDeNascimento" name="dataDeNascimento" id="dataDeNascimento" [showIcon]="true"></p-calendar>
+        </div>
         <br />
-        <input type="telefone" pInputText class="form-control" name="email" id="email" [(ngModel)]="email"
-          aria-describedby="emailHelp" placeholder="telefone">
+        <div>
+          <button type="submit" (click)="salvar()"  class="button"> Salvar </button>
+
+        </div>
       </div>
-      <br />
-      <div class="form-group">
-        <label for="site">site : </label>
-        <br />
-        <input type="site" pInputText class="form-control" name="site" [(ngModel)]="site" id="site" placeholder="site">
-      </div>
-      <br />
-      <div>
-        <label for="dataDeNascimento" >Data de nascimento: </label>
-        <br />
-        <p-calendar [(ngModel)]="dataDeNascimento" name="dataDeNascimento" id="dataDeNascimento" [showIcon]="true"></p-calendar>
-      </div>
-      <br />
-      <button type="submit" (click)="salvar()"  class="button"> Salvar </button>
+
     </form>
     </div>
   </div>

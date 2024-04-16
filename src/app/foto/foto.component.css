@@ -1,27 +1,23 @@
-.card {
-  background: var(--surface-card);
-  border: var(--card-border);
-  padding: 2rem;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
+
 div#wapper {
-  width: 100vw;
-  height: 100vh;
+  width: 100vw !important;
+  height: 90vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  max-height: 100%
 }
 div#wapper div.formulario {
   padding: 5pc 3pc 0pc 3pc;
   background-color: #fff;
   width: 50vw;
-  height: 90vh;
+  /*height: 80vh;*/
   box-shadow: 1px 6px 8px 2px rgba(0, 0, 0, 0.42);
   padding: 2rem;
   border-radius: 10px;
   margin-bottom: 1rem;
+  max-height: 100%
 }
 div#wapper div.formulario h2 {
   font-family: "KoHo";
@@ -42,10 +38,16 @@ div#wapper div.formulario p {
 
 div#wapper div.formulario form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-family: "Open Sans";
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-between;
 }
 
+div#wapper div.formulario form input {
+  max-width: 100%;
+}
 div#wapper div.formulario form label {
   font-size: 12pt;
   color: #777;
@@ -55,15 +57,9 @@ div#wapper div.formulario form label {
 
 .btn-text-right{
   margin-left: 100%;
-	text-align: right;
+  text-align: right;
   margin-bottom: 20px;;
 }
-#signup-form {
-  position: relative;
-  min-height: 300px;
-  overflow: hidden;
-}
-
 
 div#wapper div.formulario form button {
   color: #f0f0f0;
@@ -71,7 +67,10 @@ div#wapper div.formulario form button {
   border: 0;
   cursor: pointer;
   height: 40px;
+  max-height : 100%;
   margin-top: 2pc;
+
+  border-radius: 10px;
 }
 
 div#wapper div.formulario form button:hover {
@@ -87,8 +86,6 @@ div#wapper div.formulario form button:hover {
   justify-content: space-between;
 }
 
-/* print */
-
 
 @keyframes hoverAnimate {
   to {
@@ -99,5 +96,22 @@ div#wapper div.formulario form button:hover {
 
   100% {
     letter-spacing: 2px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  input{
+    max-width: 100% !important;
+  }
+  div#wapper div.formulario{
+    width: 100vw !important;
+  }
+  div#wapper div.formulario form {
+    display: flex;
+    flex-direction: row;
+    font-family: "Open Sans";
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 }

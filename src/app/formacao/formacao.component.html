@@ -1,53 +1,50 @@
-<p>formacao works!</p>
-<p>{{formacao}}</p>
+<p xmlns="http://www.w3.org/1999/html">{{formacao}}</p>
 <div class="card flex flex-column md:flex-row gap-3">
-  <div id="wapper" class="card">
+  <div id="wapper">
     <div class="formulario">
-      <h2> Cadastro <span> Usuario</span></h2>
+      <h2> Cadastro <span> formaçao</span></h2>
       <br />
       <form name="signup-form">
-        <div>
-          <label for="nome do curso" class="ng-binding"> Nível de formação: </label>
+        <div class="row" >
+          <div>
+            <label class="ng-binding"> Nível de formação: </label>
+            <br />
+            <p-dropdown [options]="formacaoList" [(ngModel)]="formacao" [showClear]="true"
+                        placeholder="Select a City"></p-dropdown>
+          </div>
+          <div>
+            <label class="ng-binding"> nome do curso : </label>
+            <br />
+            <input type="name" pInputText class="form-control" name="nome do curso" [(ngModel)]="nomeCurso"
+                   placeholder="nome do curso">
+          </div>
+          <div>
+            <div>
+              <label>Entidade de Ensino : </label>
+              <br />
+              <input type="Entidade de Ensino" pInputText name="Entidade de Ensino" id="Entidade de Ensino"
+                     [(ngModel)]="nomeInstitucao" aria-describedby="emailHelp" placeholder="Entidade de Ensino">
+            </div>
+          </div>
+          <br/>
+        </div>
+        <div class="row">
+          <div>
+            <label>Data de inicio: </label>
+            <br />
+            <p-calendar [(ngModel)]="dataDeInicio" name="dataDeInicio" id="dataDeInicio" [showIcon]="true"></p-calendar>
+          </div>
           <br />
-          <p-dropdown [options]="formacaoList" [(ngModel)]="formacao" [showClear]="true"
-            placeholder="Select a City"></p-dropdown>
+          <div>
+            <label>Data de termino: </label>
+            <br />
+            <p-calendar [(ngModel)]="dataDeTermino" name="dataDeTermino" id="dataDeTermino"
+                        [showIcon]="true"></p-calendar>
+          </div>
         </div>
-        <br />
-        <div>
-          <label for="nome do curso" class="ng-binding"> nome do curso : </label>
-          <br />
-          <input type="name" pInputText class="form-control" name="nome do curso" [(ngModel)]="nomeCurso"
-            placeholder="nome do curso">
-        </div>
-        <br />
-        <div>
-          <label for="nome do curso">Entidade de Ensino : </label>
-          <br />
-          <input type="Entidade de Ensino" pInputText name="Entidade de Ensino" id="Entidade de Ensino"
-            [(ngModel)]="nomeInstitucao" aria-describedby="emailHelp" placeholder="Entidade de Ensino">
-        </div>
-        <br />
-        <div>
-          <label for="site">Data de inicio: </label>
-          <br />
-          <p-calendar [(ngModel)]="dataDeInicio" name="dataDeInicio" id="dataDeInicio" [showIcon]="true"></p-calendar>
-        </div>
-        <br />
-        <div>
-          <p-checkbox [(ngModel)]="cursando" [binary]="true" [ngModelOptions]="{ standalone: true }" name="cursando"
-            inputId="binary"></p-checkbox>
-          <label for="site"> Cursando: </label>
-        </div>
-        <br />
-        <div *ngIf="!cursando">
-          <label for="site">Data de termino: </label>
-          <br />
-          <p-calendar [(ngModel)]="dataDeTermino" name="dataDeTermino" id="dataDeTermino"
-            [showIcon]="true"></p-calendar>
-        </div>
-        <br />
-        <button type="submit" (click)="salvar()" class="button"> Salvar </button>
+        <button class="row" type="submit" (click)="salvar()" class="button"> Salvar </button>
       </form>
+
     </div>
   </div>
 </div>

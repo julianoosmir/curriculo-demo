@@ -14,7 +14,6 @@ export class FormacaoComponent implements OnInit {
   formacao? = '';
   nomeCurso? = '';
   nomeInstitucao? = '';
-  cursando : any| boolean;
   dataDeInicio: any | undefined;
   dataDeTermino: any | undefined;
 
