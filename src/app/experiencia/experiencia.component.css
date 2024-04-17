@@ -43,6 +43,7 @@ div#wapper div.formulario form {
   flex-wrap: wrap;
   align-content: stretch;
   justify-content: space-between;
+  wight: 20px;
 }
 
 
@@ -98,6 +99,13 @@ div#wapper div.formulario form button:hover {
 
 .row{
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cargo{
+  display: inline-block;
+  margin: 10px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;

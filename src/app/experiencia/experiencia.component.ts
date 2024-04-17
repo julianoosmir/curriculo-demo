@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class ExperienciaComponent {
   cargo? = '';
   nomeEmpresa? = '';
+  descricao : string | undefined;
   trabalhoAqui  : any| boolean;
   dataDeInicio: any | undefined;
   dataDeTermino: any | undefined;
