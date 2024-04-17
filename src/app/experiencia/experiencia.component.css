@@ -88,8 +88,14 @@ div#wapper div.formulario form button:hover {
   justify-content: space-between;
 }
 .checkbox{
-  margin: 15px;
+  margin: 30px;
+  font-size: 1pt;
+
 }
+.checkbox label{
+  font-size: 1pt;
+}
+
 .row{
   display: flex;
   flex-direction: row;
@@ -102,7 +108,7 @@ div#wapper div.formulario form button:hover {
 }
 
 .calendar{
-  width: 200px;
+  width: 250px;
 }
 
 @keyframes hoverAnimate {
@@ -116,6 +122,13 @@ div#wapper div.formulario form button:hover {
     letter-spacing: 2px;
   }
 }
+
+@media (max-height: 950px) {
+  .row{
+    flex-direction: column;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   input{
     max-width: 100% !important;

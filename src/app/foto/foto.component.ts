@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef} from '@angular/core';
+import {DadosPessoa} from "../models/DadosPessoais";
 
 @Component({
   selector: 'app-foto',
@@ -8,8 +9,14 @@ import { Component } from '@angular/core';
 export class FotoComponent {
 
   foto: any;
-  fotografia : File | undefined;
   imageurl: any;
+  dadosPessoais: DadosPessoa = new DadosPessoa("","","","","","",new Date())
+
+  constructor(private elementRef: ElementRef<HTMLElement>) {}
+
+  ngOnInit(){
+
+  }
 
   onFileSelected(event: any) {
     console.log(event)
@@ -30,8 +37,10 @@ export class FotoComponent {
     return window.btoa(binary);
   }
 
-  salvar() {
-    throw new Error('Method not implemented.');
+  alterar() {
+    const len = 2;
+    const page = 1120;
+    return (page * len) + "px";
   }
 
 }

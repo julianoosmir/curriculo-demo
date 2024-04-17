@@ -23,28 +23,38 @@
           <label for="email">email : </label>
           <br />
           <input type="telefone" pInputText class="form-control" name="email" id="email" [(ngModel)]="email"
-                 aria-describedby="emailHelp" placeholder="telefone">
+                 aria-describedby="emailHelp" placeholder="email">
         </div>
         <br />
+        <div class="form-group">
+          <label for="site">whatsapp : </label>
+          <br />
+          <input type="whatsapp" pInputText class="form-control" name="site" [(ngModel)]="whatsapp" id="whatsapp" placeholder="whatsapp">
+        </div>
+      </div>
+      <br/>
+      <div>
+        <div class="form-group">
+          <label for="endereco">Endereço: </label>
+          <br />
+          <input type="endereco" pInputText class="form-control" name="Endereco" id="Endereco" [(ngModel)]="endereco"
+                 aria-describedby="emailHelp" placeholder="Endereço">
+        </div>
+        <br/>
         <div class="form-group">
           <label for="site">site : </label>
           <br />
           <input type="site" pInputText class="form-control" name="site" [(ngModel)]="site" id="site" placeholder="site">
         </div>
       </div>
-      <div>
-        <div>
+      <div style="width: 280px">
           <label for="dataDeNascimento" >Data de nascimento: </label>
           <br />
-          <p-calendar [(ngModel)]="dataDeNascimento" name="dataDeNascimento" id="dataDeNascimento" [showIcon]="true"></p-calendar>
-        </div>
-        <br />
-        <div>
-          <button type="submit" (click)="salvar()"  class="button"> Salvar </button>
+            <p-calendar [(ngModel)]="dataDeNascimento" name="dataDeNascimento" dateFormat="dd/mm/yy"  id="dataDeNascimento" [showIcon]="true"></p-calendar>
+          <br/>
 
-        </div>
       </div>
-
+      <button type="submit" (click)="salvar()"  class="button"> Salvar </button>
     </form>
     </div>
   </div>

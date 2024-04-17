@@ -4,46 +4,48 @@
     <div class="formulario">
       <h2> Cadastro <span> formaçao</span></h2>
       <br />
-      <form name="signup-form">
-        <div class="row" >
+      <form>
+        <div class="row">
           <div>
             <label class="ng-binding"> Nível de formação: </label>
             <br />
             <p-dropdown [options]="formacaoList" [(ngModel)]="formacao" [showClear]="true"
                         placeholder="Select a City"></p-dropdown>
           </div>
+          <br/>
           <div>
             <label class="ng-binding"> nome do curso : </label>
             <br />
             <input type="name" pInputText class="form-control" name="nome do curso" [(ngModel)]="nomeCurso"
                    placeholder="nome do curso">
           </div>
+          <br/>
           <div>
-            <div>
+
               <label>Entidade de Ensino : </label>
               <br />
               <input type="Entidade de Ensino" pInputText name="Entidade de Ensino" id="Entidade de Ensino"
                      [(ngModel)]="nomeInstitucao" aria-describedby="emailHelp" placeholder="Entidade de Ensino">
-            </div>
           </div>
-          <br/>
         </div>
         <div class="row">
-          <div>
+          <div style="width: 280px;">
             <label>Data de inicio: </label>
             <br />
             <p-calendar [(ngModel)]="dataDeInicio" name="dataDeInicio" id="dataDeInicio" [showIcon]="true"></p-calendar>
           </div>
           <br />
-          <div>
+          <div style="width: 280px;">
             <label>Data de termino: </label>
             <br />
             <p-calendar [(ngModel)]="dataDeTermino" name="dataDeTermino" id="dataDeTermino"
                         [showIcon]="true"></p-calendar>
           </div>
-        </div>
-        <button class="row" type="submit" (click)="salvar()" class="button"> Salvar </button>
+      </div>
+        <button type="submit" (click)="salvar()" class="button"> inserir </button>
+        <button type="submit" (click)="salvar()" class="button"> Salvar </button>
       </form>
+
 
     </div>
   </div>

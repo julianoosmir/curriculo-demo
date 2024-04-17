@@ -19,30 +19,32 @@
             <input type="name" pInputText class="form-control" name="nome do Empresa" [(ngModel)]="nomeEmpresa"
                    placeholder="nome do Empresa">
           </div>
+          <br/>
         </div>
-        <br />
-
+        <br/>
         <div class="row">
-          <div class="calendar">
+          <div>
             <label>Data de inicio: </label>
             <br />
             <p-calendar [(ngModel)]="dataDeInicio" name="dataDeInicio" id="dataDeInicio" [showIcon]="true"></p-calendar>
           </div>
+          <br/>
           <div class="checkbox">
             <p-checkbox  [(ngModel)]="trabalhoAqui" [binary]="true" [ngModelOptions]="{ standalone: true }"
                          name="trabalhoAqui" inputId="binary"></p-checkbox>
-            <label> Trabalho atualmente neste cargo: </label>
+            <label> Trabalho atualmente neste cargo </label>
           </div>
-
-          <div class="calendar" *ngIf="!trabalhoAqui">
+        </div>
+        <div class="row">
+          <div  *ngIf="!trabalhoAqui">
             <label>Data de termino: </label>
             <br />
             <p-calendar [(ngModel)]="dataDeTermino" name="dataDeTermino" id="dataDeTermino"
                         [showIcon]="true"></p-calendar>
           </div>
         </div>
-
         <br />
+        <button type="submit" (click)="salvar()" class="button"> Salvar </button>
         <button type="submit" (click)="salvar()" class="button"> Salvar </button>
       </form>
     </div>

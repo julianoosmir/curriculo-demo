@@ -44,7 +44,9 @@ div#wapper div.formulario form {
   align-content: stretch;
   justify-content: space-between;
 }
-
+div#wapper div.formulario form div{
+  margin: 5px;
+}
 div#wapper div.formulario form input {
   max-width: 100%;
 }
@@ -108,9 +110,9 @@ div#wapper div.formulario form button:hover {
     display: flex;
     flex-direction: row;
     font-family: "Open Sans";
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: space-between;
-    align-items: flex-end;
+    /*flex-wrap: wrap;*/
+    /*align-content: stretch;*/
+    /*justify-content: space-between;*/
+    /*align-items: flex-end;*/
   }
 }

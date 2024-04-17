@@ -61,7 +61,7 @@ div#wapper div.formulario form label {
   margin-bottom: 20px;;
 }
 
-div#wapper div.formulario form button {
+div#wapper button {
   color: #f0f0f0;
   background-color: #40739e;
   border: 0;
@@ -96,7 +96,7 @@ div#wapper div.formulario form button:hover {
 }
 
 .row div{
-  margin-left: 10px;
+  margin: 10px 3px 10px 30px;
 }
 
 @keyframes hoverAnimate {
@@ -110,7 +110,19 @@ div#wapper div.formulario form button:hover {
     letter-spacing: 2px;
   }
 }
+
+@media (max-width: 900px) {
+  .row{
+    flex-direction: column;
+  }
+}
+@media (max-height: 950px) {
+  .row{
+    flex-direction: column;
+  }
+}
 @media only screen and (max-width: 700px) {
+
   input{
     max-width: 100% !important;
   }

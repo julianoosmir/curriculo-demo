@@ -13,12 +13,14 @@
         </div>
         <br />
 
-        <button type="submit" [useExistingCss]="true" styleSheetFile="assets/css/print-pdf.css" mat-fab printSectionId="minimal" ngxPrint class="button"> Salvar
+        <button type="submit" [useExistingCss]="true"  styleSheetFile="assets/css/print-pdf.scss"
+                mat-fab printSectionId="minimal" ngxPrint class="button">
+          Salvar
         </button>
       </form>
-      <div id="minimal">
+      <div id="minimal" style="display: none">
         <div style="display: flex;flex-direction: row;max-width: 700px;max-height: 100%;">
-          <div id="esquerdo">
+          <div id="esquerdo" [ngStyle]="{'height': alterar()}">
             <p-image id="foto" [src]="imageurl" alt="Image" imageClass="redondo"></p-image>
             <h1 class="nome">juliano cesar osmir hein</h1>
             <br />
@@ -33,7 +35,7 @@
           <br />
           <div id="direito" style="width: 500px;">
             <div>
-              <p style="width: 300px;">Data de nascimento: 11/07/1999</p>
+              <p style="width: 300px;">Data de nascimento: {{ dadosPessoais.dataDeNascimento.toLocaleDateString("pt-BR") }}</p>
               <p style="width: 300px;">Endereço: Rua Clementina de Jesus Nº 26 Setor 5
                 conjunto Aero Rancho, Campo Grande MS </p>
             </div>
