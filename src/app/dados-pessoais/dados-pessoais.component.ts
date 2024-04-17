@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import { Location } from '@angular/common';
+import {DadosPessoa} from "../models/DadosPessoais";
 
 @Component({
   selector: 'app-dados-pessoais',
@@ -18,11 +20,17 @@ export class DadosPessoaisComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router,
+    private location: Location) {
 
   }
 
-  salvar(){
+  salvarDadosPessoais() {
+    this.msg = '';
+
+  }
+
+  prosseguir(){
     this.router.navigate(['/formacao']);
   }
 

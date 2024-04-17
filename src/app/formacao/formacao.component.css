@@ -126,8 +126,13 @@ div#wapper div.formulario form button:hover {
   input{
     max-width: 100% !important;
   }
+  div#wapper{
+    height: 140vh !important;
+
+  }
   div#wapper div.formulario{
     width: 100vw !important;
+    height: 130vh !important;
   }
   div#wapper div.formulario form {
     display: flex;
