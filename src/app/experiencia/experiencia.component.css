@@ -135,6 +135,13 @@ div#wapper div.formulario form button:hover {
   .row{
     flex-direction: column;
   }
+  div#wapper{
+    height: 130vh !important;
+
+  }
+  div#wapper div.formulario{
+    height: 130vh !important;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -142,12 +149,12 @@ div#wapper div.formulario form button:hover {
     max-width: 100% !important;
   }
   div#wapper{
-    height: 140vh !important;
+    height: 150vh !important;
 
   }
   div#wapper div.formulario{
     width: 100vw !important;
-    height: 130vh !important;
+    height: 150vh !important;
   }
 
   div#wapper div.formulario form {

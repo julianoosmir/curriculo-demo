@@ -27,9 +27,9 @@ div#wapper div.formulario h2 {
   margin-bottom: 0;
 }
 
-div#wapper div.formulario h2 span {
-  color: #40739e;
-}
+/*div#wapper div.formulario h2 span {*/
+/*  color: #40739e;*/
+/*}*/
 
 div#wapper div.formulario p {
   text-align: center;
@@ -98,6 +98,9 @@ div#wapper div.formulario form button:hover {
 .row div{
   margin: 10px 3px 10px 30px;
 }
+.remove{
+  margin-left: 80%;
+}
 
 @keyframes hoverAnimate {
   to {
@@ -120,6 +123,9 @@ div#wapper div.formulario form button:hover {
   .row{
     flex-direction: column;
   }
+  .remove{
+    margin-left: 60%;
+  }
 }
 @media only screen and (max-width: 700px) {
 
@@ -127,12 +133,12 @@ div#wapper div.formulario form button:hover {
     max-width: 100% !important;
   }
   div#wapper{
-    height: 140vh !important;
+    height: 180vh !important;
 
   }
   div#wapper div.formulario{
     width: 100vw !important;
-    height: 130vh !important;
+    height: 150vh !important;
   }
   div#wapper div.formulario form {
     display: flex;
@@ -142,5 +148,8 @@ div#wapper div.formulario form button:hover {
     align-content: stretch;
     justify-content: space-between;
     align-items: flex-end;
+  }
+  .remove{
+    margin-left: 50%;
   }
 }

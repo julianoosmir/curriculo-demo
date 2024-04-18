@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {Formacao} from "../models/Formacao";
+import {Experiencia} from "../models/Experiencia";
 
 @Component({
   selector: 'app-formacao',
@@ -11,12 +13,13 @@ export class FormacaoComponent implements OnInit {
   formacaoList? = ['Nível de formação','Ensino fundamental',
                   'Ensino médio','Ensino superior','Pós-graduação',
                   'Mestrado','Doutorado','Pós-doutorado'];
-  formacao? = '';
-  nomeCurso? = '';
-  nomeInstitucao? = '';
+  grau = '';
+  nomeCurso = '';
+  nomeInstitucao = '';
   dataDeInicio: any | undefined;
   dataDeTermino: any | undefined;
 
+  formacoes: Formacao[] = [];
 
   constructor(
     private router: Router) {
@@ -28,7 +31,22 @@ export class FormacaoComponent implements OnInit {
     'Ensino médio','Ensino superior','Pós-graduação',
     'Mestrado','Doutorado','Pós-doutorado'];
   }
+
+  inserir() {
+    const formacao = new Formacao(
+      this.nomeInstitucao,
+      this.nomeCurso,
+      this.grau,
+      this.dataDeInicio,
+      this.dataDeTermino)
+
+    this.formacoes.push(formacao);
+  }
   salvar(){
     this.router.navigate(['/experiencia']);
+  }
+
+  remover(item: Formacao) {
+    this.formacoes = this.formacoes.filter(f=>f !== item);
   }
 }

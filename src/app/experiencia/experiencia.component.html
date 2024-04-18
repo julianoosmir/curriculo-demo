@@ -23,9 +23,15 @@
         </div>
         <br/>
         <div class="cargo">
-          <label  class="ng-binding"> cargo na Empresa : </label>
+          <label  class="ng-binding"> Descrição : </label>
           <br />
           <textarea rows="4" cols="25" pInputTextarea [(ngModel)]="descricao"></textarea>
+        </div>
+        <br/>
+        <div class="cargo">
+          <label  class="ng-binding"> Ferramentas ultilizadas : </label>
+          <br />
+          <textarea rows="4" cols="25" pInputTextarea [(ngModel)]="ferramentas"></textarea>
         </div>
         <br/>
         <div class="row">
@@ -53,7 +59,7 @@
         </div>
         <br />
 
-        <button type="submit" (click)="salvar()" class="button"> inserir </button>
+        <button type="submit" (click)="inserir()" class="button"> inserir </button>
         <button type="submit" (click)="salvar()" class="button"> Salvar </button>
       </form>
     </div>

@@ -15,6 +15,7 @@ import { FotoComponent } from './foto/foto.component';
 import { ImageModule } from 'primeng/image';
 import {NgxPrintModule} from 'ngx-print';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { AccordionModule } from 'primeng/accordion';
 
 
 
@@ -38,6 +39,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     CheckboxModule,
     ImageModule,
     InputTextareaModule,
+    AccordionModule,
     NgxPrintModule
   ],
   providers: [

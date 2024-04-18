@@ -1,4 +1,4 @@
-<p xmlns="http://www.w3.org/1999/html">{{formacao}}</p>
+<p xmlns="http://www.w3.org/1999/html">{{grau}}</p>
 <div class="card flex flex-column md:flex-row gap-3">
   <div id="wapper">
     <div class="formulario">
@@ -9,7 +9,7 @@
           <div>
             <label class="ng-binding"> Nível de formação: </label>
             <br />
-            <p-dropdown [options]="formacaoList" [(ngModel)]="formacao" [showClear]="true"
+            <p-dropdown [options]="formacaoList" [(ngModel)]="grau" [showClear]="true"
                         placeholder="Select a City"></p-dropdown>
           </div>
           <br/>
@@ -32,20 +32,39 @@
           <div style="width: 280px;">
             <label>Data de inicio: </label>
             <br />
-            <p-calendar [(ngModel)]="dataDeInicio" name="dataDeInicio" id="dataDeInicio" [showIcon]="true"></p-calendar>
+            <p-calendar [(ngModel)]="dataDeInicio" name="dataDeInicio" id="dataDeInicio"  dateFormat="dd/mm/yy" [showIcon]="true"></p-calendar>
           </div>
           <br />
           <div style="width: 280px;">
             <label>Data de termino: </label>
             <br />
-            <p-calendar [(ngModel)]="dataDeTermino" name="dataDeTermino" id="dataDeTermino"
+            <p-calendar [(ngModel)]="dataDeTermino" name="dataDeTermino" dateFormat="dd/mm/yy" id="dataDeTermino"
                         [showIcon]="true"></p-calendar>
           </div>
       </div>
-        <button type="submit" (click)="salvar()" class="button"> inserir </button>
+        <button type="submit" (click)="inserir()" class="button"> inserir </button>
         <button type="submit" (click)="salvar()" class="button"> Salvar </button>
       </form>
+      <div *ngIf="formacoes.length">
+        <p-accordion [activeIndex]="0">
+          @for(item of formacoes;track item.instituicao) {
+            <p-accordionTab header="{{item.instituicao}}" >
+              <ng-template pTemplate="header">
+                <span class="remove">
+                  <p-button icon="pi pi-times" [rounded]="true" severity="danger" (onClick)="remover(item)"></p-button>
+                </span>
 
+              </ng-template>
+
+
+              <p>
+                {{item.curso}} - {{item.dataDeInicio.toLocaleDateString()}} á {{item.dataDeTermino.toLocaleDateString()}}
+              </p>
+            </p-accordionTab>
+
+          }
+        </p-accordion>
+      </div>
 
     </div>
   </div>
