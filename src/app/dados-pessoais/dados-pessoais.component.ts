@@ -25,8 +25,15 @@ export class DadosPessoaisComponent {
   }
 
   salvarDadosPessoais() {
-    const DadosPessoais = new DadosPessoa(this.nome, this.telefone, this.whatsapp,
-      this.site, this.email, this.endereco, this.dataDeNascimento);
+    const DadosPessoais :DadosPessoa = {
+      nome: this.nome,
+      telefone: this.telefone,
+      whatsapp: this.whatsapp,
+      site: this.site,
+      email: this.email,
+      endereco: this.endereco,
+      dataDeNascimento: this.dataDeNascimento.toLocaleDateString("pt-br"),
+    }
     localStorage.setItem("DadosPessoais", JSON.stringify(DadosPessoais));
 
   }

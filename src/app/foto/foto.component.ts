@@ -1,21 +1,38 @@
-import {Component, ElementRef} from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 import {DadosPessoa} from "../models/DadosPessoais";
+import {Experiencia} from "../models/Experiencia";
+import {Formacao} from "../models/Formacao";
 
 @Component({
   selector: 'app-foto',
   templateUrl: './foto.component.html',
   styleUrl: './foto.component.css'
 })
-export class FotoComponent {
+export class FotoComponent implements OnInit {
 
   foto: any;
   imageurl: any;
-  dadosPessoais: DadosPessoa = new DadosPessoa("","","","","","",new Date())
+  dadosPessoais: DadosPessoa | undefined;
+  esperiencias : Experiencia[] = [];
+  formacoes: Formacao[] = [];
+
 
   constructor(private elementRef: ElementRef<HTMLElement>) {}
 
   ngOnInit(){
+   this.setValor();
+  }
 
+  setValor(){
+
+    const dados = localStorage.getItem("DadosPessoais");
+    this.dadosPessoais = null !== dados ? JSON.parse(dados) : null;
+
+    const forma = localStorage.getItem("formacoes");
+    this.formacoes = null !== forma ? JSON.parse(forma) : [];
+
+    const exp = localStorage.getItem("experiencia");
+    this.esperiencias = null !== exp? JSON.parse(exp) : [];
   }
 
   onFileSelected(event: any) {
@@ -27,6 +44,8 @@ export class FotoComponent {
     })
   };
 
+
+
   arrayBufferToBase64(buffer: ArrayBuffer): string {
     let binary = '';
     const bytes = new Uint8Array(buffer);
@@ -37,8 +56,10 @@ export class FotoComponent {
     return window.btoa(binary);
   }
 
+
+
   alterar() {
-    const len = 2;
+    const len = 1;
     const page = 1120;
     return (page * len) + "px";
   }

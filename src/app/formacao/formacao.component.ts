@@ -43,6 +43,7 @@ export class FormacaoComponent implements OnInit {
     this.formacoes.push(formacao);
   }
   salvar(){
+    localStorage.setItem("formacoes", JSON.stringify(this.formacoes));
     this.router.navigate(['/experiencia']);
   }
 

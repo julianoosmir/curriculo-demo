@@ -2,20 +2,20 @@
   <div id="wapper" class="card">
     <div class="formulario">
       <h2> Cadastro <span> Experiencia</span></h2>
-      <br />
+      <br/>
       <form name="signup-form">
 
         <div class="row">
           <div>
             <label class="ng-binding"> Cargo : </label>
-            <br />
+            <br/>
             <input type="name" pInputText class="form-control" name="nome do cargo" [(ngModel)]="cargo"
                    placeholder="nome do cargo">
           </div>
-          <br />
+          <br/>
           <div>
-            <label  class="ng-binding"> nome da Empresa : </label>
-            <br />
+            <label class="ng-binding"> nome da Empresa : </label>
+            <br/>
             <input type="name" pInputText class="form-control" name="nome do Empresa" [(ngModel)]="nomeEmpresa"
                    placeholder="nome do Empresa">
           </div>
@@ -23,45 +23,74 @@
         </div>
         <br/>
         <div class="cargo">
-          <label  class="ng-binding"> Descrição : </label>
-          <br />
-          <textarea rows="4" cols="25" pInputTextarea [(ngModel)]="descricao"></textarea>
+          <label class="ng-binding"> Descrição : </label>
+          <br/>
+          <textarea rows="4" cols="25" pInputTextarea [(ngModel)]="descricao" [ngModelOptions]="{ standalone: true }"></textarea>
         </div>
         <br/>
         <div class="cargo">
-          <label  class="ng-binding"> Ferramentas ultilizadas : </label>
-          <br />
-          <textarea rows="4" cols="25" pInputTextarea [(ngModel)]="ferramentas"></textarea>
+          <label class="ng-binding"> Ferramentas ultilizadas : </label>
+          <br/>
+          <textarea rows="4" cols="25" pInputTextarea [(ngModel)]="ferramentas" [ngModelOptions]="{ standalone: true }"></textarea>
         </div>
         <br/>
         <div class="row">
           <div>
             <label>Data de inicio: </label>
-            <br />
-            <p-calendar [(ngModel)]="dataDeInicio" name="dataDeInicio" id="dataDeInicio" [showIcon]="true"></p-calendar>
+            <br/>
+            <p-calendar [(ngModel)]="dataDeInicio" name="dataDeInicio" id="dataDeInicio" dateFormat="mm/yy" [showIcon]="true"></p-calendar>
           </div>
           <br/>
           <div class="checkbox">
-            <p-checkbox  [(ngModel)]="trabalhoAqui" [binary]="true" [ngModelOptions]="{ standalone: true }"
-                         name="trabalhoAqui" inputId="binary"></p-checkbox>
+            <p-checkbox [(ngModel)]="trabalhoAqui" [binary]="true" [ngModelOptions]="{ standalone: true }"
+                        name="trabalhoAqui" inputId="binary"></p-checkbox>
             <label> Trabalho atualmente neste cargo </label>
           </div>
         </div>
 
-        <br />
+        <br/>
         <div class="row">
-          <div  *ngIf="!trabalhoAqui">
+          <div *ngIf="!trabalhoAqui">
             <label>Data de termino: </label>
-            <br />
-            <p-calendar [(ngModel)]="dataDeTermino" name="dataDeTermino" id="dataDeTermino"
+            <br/>
+            <p-calendar [(ngModel)]="dataDeTermino" name="dataDeTermino" dateFormat="mm/yy" id="dataDeTermino"
                         [showIcon]="true"></p-calendar>
           </div>
         </div>
-        <br />
+        <br/>
 
-        <button type="submit" (click)="inserir()" class="button"> inserir </button>
-        <button type="submit" (click)="salvar()" class="button"> Salvar </button>
+        <button type="submit" (click)="inserir()" class="button"> inserir</button>
+        <button type="submit" (click)="salvar()" class="button"> Salvar</button>
       </form>
+      <br/>
+      <div *ngIf="experiencias.length">
+        <p-accordion [activeIndex]="0">
+          @for (item of experiencias; track item.empresa) {
+            <p-accordionTab header="{{item.empresa}}">
+              <ng-template pTemplate="header">
+                <span class="remove">
+                  <p-button icon="pi pi-times" [rounded]="true" severity="danger" (onClick)="remover(item)"></p-button>
+                </span>
+
+              </ng-template>
+
+              <p>
+                {{ item.cargo }} - {{ item.dataInicio }}
+                <span *ngIf="item.dataFim">
+                  á {{ item.dataFim}}
+                </span>
+              </p>
+              <p>
+                <b> Descrição  </b> : {{item.descricao}}
+              </p>
+              <p>
+                <b> Ferramentas ultilizadas </b> : {{item.ferramentas}}
+              </p>
+            </p-accordionTab>
+
+          }
+        </p-accordion>
+      </div>
     </div>
   </div>
 </div>

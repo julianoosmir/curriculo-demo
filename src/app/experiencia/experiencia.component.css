@@ -43,7 +43,6 @@ div#wapper div.formulario form {
   flex-wrap: wrap;
   align-content: stretch;
   justify-content: space-between;
-  wight: 20px;
 }
 
 
@@ -118,6 +117,9 @@ div#wapper div.formulario form button:hover {
 .calendar{
   width: 250px;
 }
+.remove{
+  margin-left: 80%;
+}
 
 @keyframes hoverAnimate {
   to {
@@ -142,6 +144,9 @@ div#wapper div.formulario form button:hover {
   div#wapper div.formulario{
     height: 130vh !important;
   }
+  .remove{
+    margin-left: 60%;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -165,5 +170,8 @@ div#wapper div.formulario form button:hover {
     align-content: stretch;
     justify-content: space-between;
     align-items: flex-end;
+  }
+  .remove{
+    margin-left: 50%;
   }
 }
