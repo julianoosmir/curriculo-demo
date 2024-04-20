@@ -16,6 +16,7 @@ import { ImageModule } from 'primeng/image';
 import {NgxPrintModule} from 'ngx-print';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { AccordionModule } from 'primeng/accordion';
+import { InputMaskModule } from 'primeng/inputmask';
 
 
 
@@ -40,6 +41,7 @@ import { AccordionModule } from 'primeng/accordion';
     ImageModule,
     InputTextareaModule,
     AccordionModule,
+    InputMaskModule,
     NgxPrintModule
   ],
   providers: [

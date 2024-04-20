@@ -104,7 +104,6 @@ div#wapper div.formulario form button:hover {
 }
 .cargo{
   display: inline-block;
-  margin: 10px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;

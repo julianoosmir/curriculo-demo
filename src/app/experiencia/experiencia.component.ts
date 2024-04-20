@@ -13,8 +13,8 @@ export class ExperienciaComponent {
   descricao = '';
   ferramentas = '';
   trabalhoAqui = false;
-  dataDeInicio: Date = new Date();
-  dataDeTermino: Date | null = null;
+  dataDeInicio = ""
+  dataDeTermino = "";
 
   experiencias: Experiencia[] = [];
 
@@ -33,16 +33,13 @@ export class ExperienciaComponent {
       this.cargo,
       this.nomeEmpresa,
       this.dataDeInicio,
-      this.ntDataTermino(),
+      this.dataDeTermino,
       this.descricao,
       this.ferramentas)
 
     this.experiencias.push(experiencia);
   }
 
-  ntDataTermino(): string {
-    return this.dataDeTermino !== null ? this.dataDeTermino.toLocaleDateString('pt-BR') : "";
-  }
 
   remover(item: Experiencia) {
     this.experiencias = this.experiencias.filter(e=>e !== item);

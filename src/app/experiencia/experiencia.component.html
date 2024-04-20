@@ -4,7 +4,6 @@
       <h2> Cadastro <span> Experiencia</span></h2>
       <br/>
       <form name="signup-form">
-
         <div class="row">
           <div>
             <label class="ng-binding"> Cargo : </label>
@@ -25,20 +24,21 @@
         <div class="cargo">
           <label class="ng-binding"> Descrição : </label>
           <br/>
-          <textarea rows="4" cols="25" pInputTextarea [(ngModel)]="descricao" [ngModelOptions]="{ standalone: true }"></textarea>
+          <textarea rows="4" cols="30" pInputTextarea [(ngModel)]="descricao" [ngModelOptions]="{ standalone: true }"></textarea>
         </div>
         <br/>
         <div class="cargo">
           <label class="ng-binding"> Ferramentas ultilizadas : </label>
           <br/>
-          <textarea rows="4" cols="25" pInputTextarea [(ngModel)]="ferramentas" [ngModelOptions]="{ standalone: true }"></textarea>
+          <textarea rows="4" cols="30" pInputTextarea [(ngModel)]="ferramentas" [ngModelOptions]="{ standalone: true }"></textarea>
         </div>
         <br/>
         <div class="row">
           <div>
             <label>Data de inicio: </label>
             <br/>
-            <p-calendar [(ngModel)]="dataDeInicio" name="dataDeInicio" id="dataDeInicio" dateFormat="mm/yy" [showIcon]="true"></p-calendar>
+            <p-inputMask type="dataInicio" mask="99/9999" class="form-control" name="Data de inicio" [(ngModel)]="dataDeInicio"
+                   placeholder="Data de inicio"/>
           </div>
           <br/>
           <div class="checkbox">
@@ -53,8 +53,8 @@
           <div *ngIf="!trabalhoAqui">
             <label>Data de termino: </label>
             <br/>
-            <p-calendar [(ngModel)]="dataDeTermino" name="dataDeTermino" dateFormat="mm/yy" id="dataDeTermino"
-                        [showIcon]="true"></p-calendar>
+            <p-inputMask type="dataTermino" mask="99/9999" class="form-control" name="Data de termino" [(ngModel)]="dataDeTermino"
+                   placeholder="Data de termino"/>
           </div>
         </div>
         <br/>
