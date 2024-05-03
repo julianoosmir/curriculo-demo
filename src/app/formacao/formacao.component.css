@@ -114,9 +114,19 @@ div#wapper div.formulario form button:hover {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-height: 950px) {
   .row{
     flex-direction: column;
+  }
+  div#wapper{
+    height: 130vh !important;
+
+  }
+  div#wapper div.formulario{
+    height: 130vh !important;
+  }
+  .remove{
+    margin-left: 60%;
   }
 }
 @media (max-height: 950px) {

@@ -98,6 +98,21 @@ div#wapper div.formulario form button:hover {
     letter-spacing: 2px;
   }
 }
+@media (max-height: 950px) {
+  .row{
+    flex-direction: column;
+  }
+  div#wapper{
+    height: 130vh !important;
+
+  }
+  div#wapper div.formulario{
+    height: 130vh !important;
+  }
+  .remove{
+    margin-left: 60%;
+  }
+}
 
 @media only screen and (max-width: 700px) {
   input{

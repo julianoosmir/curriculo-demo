@@ -59,9 +59,10 @@ export class FotoComponent implements OnInit {
 
 
   alterar() {
-    const len = 1;
-    const page = 1120;
+    const len = (this.esperiencias.length/3);
+    const page = 1080;
     return (page * len) + "px";
   }
+
 
 }

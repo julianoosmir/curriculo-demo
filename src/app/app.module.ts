@@ -17,6 +17,7 @@ import {NgxPrintModule} from 'ngx-print';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { AccordionModule } from 'primeng/accordion';
 import { InputMaskModule } from 'primeng/inputmask';
+import {SharedModule} from "./shared/shared.module";
 
 
 
@@ -42,6 +43,7 @@ import { InputMaskModule } from 'primeng/inputmask';
     InputTextareaModule,
     AccordionModule,
     InputMaskModule,
+    SharedModule,
     NgxPrintModule
   ],
   providers: [

@@ -1,4 +1,14 @@
 
+.folha{
+  display: flex;
+  flex-direction: row;
+  max-width: 750px;
+  max-height: 100%;
+}
+hr {
+  border-color:black;
+  width:100%;
+}
 .redondo {
   border-radius: 50%;
   width: 250px;
@@ -7,13 +17,28 @@
 }
 
 .nome {
-  font-family: "Century Gothic", "Century";
-  font-size: 70px;
+  font-family: "Century";
+  font-size: 50px;
   margin: 20px;
+  text-transform: uppercase;
 }
 
+.contato{
+  font-family: "Century Gothic", "Century";
+  font-size: 30px;
+  margin: 20px;
+  width: 300px;
+
+}
+.arial-titulo{
+  font-family: "Arial";
+  font-size: 30px;
+  margin: 20px;
+  max-width: 300px;
+
+}
 #foto {
-  margin: 10px;
+  margin-top: 10px;
 }
 
 #minimal {
@@ -22,16 +47,44 @@
 
 #esquerdo {
   background-color: #d9d7d7;
-  width: 500px;
+  width: 300px;
   margin-bottom: 0px;
+  border-radius: 10px;
+
   /*height: 2240px;*/
   //height: 1120px;
+
+}
+
+.site{
+  font-family: "Arial";
+  font-size: 20px;
+  margin: 20px;
+  max-width: 300px;
 }
 
 #direito {
   margin-bottom: 0px;
   margin-left: 20px;
+  max-width: 500px;
 }
+
+.titulo-direito{
+  font-family: "Arial";
+  font-size: 20px;
+  margin-bottom: 1px;
+  max-width: 600px;
+  text-align: justify;
+}
+
+.texto-direito {
+  text-align: justify;
+  font-size: 18px;
+  max-width: 600px;
+  line-height: 1.5;
+
+}
+
 
 body {}
 
@@ -40,8 +93,11 @@ body {}
 }
 
 @page {
-  margin: 0;
   max-height: 100%;
+  size: A4;
+  margin: 0;
+  margin-top: 40px;
+
 }
 
 * {

@@ -3,60 +3,75 @@
   <div id="wapper" class="card">
     <div class="formulario">
       <h2> Cadastro <span> Usuario</span></h2>
-      <br />
+      <br/>
       <form id="container" name="signup-form">
         <div>
-          <label  class="ng-binding"> foto : </label>
-          <br />
+          <label class="ng-binding"> foto : </label>
+          <br/>
           <input type="file" class="form-control" name="nome" (change)="onFileSelected($event)" #fileUpload
-            placeholder="nome">
+                 placeholder="nome">
         </div>
-        <br />
+        <br/>
 
-        <button type="submit" [useExistingCss]="true"  styleSheetFile="assets/css/print-pdf.scss"
+        <button type="submit" [useExistingCss]="true" styleSheetFile="assets/css/print-pdf.scss"
                 mat-fab printSectionId="minimal" ngxPrint class="button">
           Salvar
         </button>
       </form>
       <div id="minimal" style="display: none">
-        <div style="display: flex;flex-direction: row;max-width: 700px;max-height: 100%;">
+        <div class="folha">
           <div id="esquerdo" [ngStyle]="{'height': alterar()}">
             <p-image id="foto" [src]="imageurl" alt="Image" imageClass="redondo"></p-image>
-            <h1 class="nome">{{dadosPessoais?.nome}}</h1>
-            <br />
-            <p class="p1" style="width: 40px;">contato</p>
-            <p style="width: 40px;">TELEFONE:</p>
-            <p style="width: 150px;">{{ dadosPessoais?.telefone }}</p>
-            <p style="width: 40px;">Site :</p>
-            <a style="width: 150px;">{{ dadosPessoais?.site }}</a>
-            <p style="width: 40px;">EMAIL:</p>
-<!--            <a style="width: 150px;">Julianoosmir&#64;outlook.com</a>-->
-            <a style="width: 150px;">{{dadosPessoais?.email}}</a>
+            <h1 class="nome">{{ dadosPessoais?.nome }}</h1>
+            <br/>
+            <p class="p1 contato"><b>Contato</b></p>
+            <hr/>
+            <p class="arial-titulo">TELEFONE:</p>
+            <p class="arial-titulo">{{ dadosPessoais?.telefone | phone }}</p>
+            <p class="arial-titulo">WhatsApp:</p>
+            <p class="arial-titulo">{{ dadosPessoais?.whatsapp | phone }}</p>
+            <p class="arial-titulo">SITE:</p>
+            <a class="site">{{ dadosPessoais?.site }}</a>
+            <p class="arial-titulo">EMAIL:</p>
+            <!--            <a s>Julianoosmir&#64;outlook.com</a>-->
+            <a class="site">{{ dadosPessoais?.email }}</a>
           </div>
-          <br />
-          <div id="direito" style="width: 500px;">
+          <br/>
+          <div id="direito" style="width: 700px;">
             <div>
-              <p style="width: 300px;">Data de nascimento: {{ dadosPessoais?.dataDeNascimento }} </p>
-              <p style="width: 300px;">Endereço: {{dadosPessoais?.endereco}}</p>
+              <p class="titulo-direito"><b> Data de nascimento: </b> {{ dadosPessoais?.dataDeNascimento }} </p>
+              <p class="titulo-direito"><b> Endereço:</b>  {{ dadosPessoais?.endereco }}</p>
             </div>
             <div>
-              <p style="width: 300px;">Formação:</p>
-              @for (fomacao of formacoes;track fomacao.instituicao){
-                <p style="width: 300px;">{{ fomacao?.instituicao }} - {{ fomacao?.curso }} </p>
-              }
+              <p class="titulo-direito"><b> Formação:</b></p>
+              <hr/>
+              <ul>
+                @for (fomacao of formacoes; track fomacao.instituicao) {
+                  <li>
+                    <p class="titulo-direito">{{ fomacao?.instituicao }} - {{ fomacao?.curso }} </p>
+                  </li>
+                }
+              </ul>
             </div>
+            <hr/>
             <div>
-              <p style="width: 300px;">Experiência :</p>
-              @for (exp of esperiencias; track exp.empresa){
-                <p style="width: 300px;">
-                  {{ exp.cargo }} – {{ exp.empresa }} -
-                  {{ exp.dataInicio }} - {{ exp.dataFim ? exp.dataFim : "Atualmente" }}
-                  - {{ exp.descricao }}
-                </p>
-                <p>
-                  Ferramentas utilizadas: {{exp.ferramentas }}
-                </p>
-              }
+              <p class="titulo-direito"><b> Experiência :</b></p>
+              <ul>
+                @for (exp of esperiencias; track exp.empresa) {
+                  <li>
+                    <p class="texto-direito">
+                      <b>
+                        {{ exp.cargo }} – {{ exp.empresa }} -
+                        {{ exp.dataInicio }} - {{ exp.dataFim ? exp.dataFim : "Atualmente" }}
+                      </b>
+                      - {{ exp.descricao }}
+                    </p>
+                    <p class="texto-direito">
+                      <b> Ferramentas utilizadas: </b> {{ exp.ferramentas }}
+                    </p>
+                  </li>
+                }
+              </ul>
             </div>
           </div>
         </div>
