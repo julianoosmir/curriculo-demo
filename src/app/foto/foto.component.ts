@@ -33,6 +33,7 @@ export class FotoComponent implements OnInit {
 
     const exp = localStorage.getItem("experiencia");
     this.esperiencias = null !== exp? JSON.parse(exp) : [];
+    console.log(this.esperiencias)
   }
 
   onFileSelected(event: any) {

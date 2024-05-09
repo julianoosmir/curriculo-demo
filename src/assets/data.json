@@ -1,0 +1,70 @@
+{
+  "DadosPessoais": {
+    "dataDeNascimento": "11/07/1999",
+    "email": "julianoosmir@outlook.com",
+    "endereco": "Rua Clementina de Jesus Nº 26 Setor 5 conjunto Aero Rancho, Campo Grande MS",
+    "nome": "juliano cesar osmir hein",
+    "site": "https://github.com/julianoosmir",
+    "telefone": "67997150500",
+    "whatsapp": "67997150500"
+  },
+  "formacoes": [
+    {
+      "curso": "ciência da computação",
+      "dataDeInicio": "2018-08-13T03:00:00.000Z",
+      "dataDeTermino": "2023-07-22T03:00:00.000Z",
+      "grau": "",
+      "instituicao": "UNIDERP"
+    }
+  ],
+  "experiencia": [
+    {
+      "cargo": "Programador .Net",
+      "dataFim": "01/2021",
+      "dataInicio": "03/2020",
+      "descricao": "Desenvolvimento de sistema web",
+      "empresa": "Fácil IT",
+      "ferramentas": "ASP.NET Core, DevExpress, SQL Serve, Bootstrap, Javascript, JQuery e Vue js."
+    },
+    {
+      "cargo": "Programador FullStack",
+      "dataFim": "06/2022",
+      "dataInicio": "05/2021",
+      "descricao": "Implementar novas funcionalidades ou requisitos no sistema em desenvolvimento, efetuar testes de unidade e de integração com outras, funcionalidades implementadas e deploy de pacotes de sistemas. ",
+      "empresa": "AZTech",
+      "ferramentas": "Java (versão 8), Spring boot, Liquibase, JUnit, Javascript, Vue js, Angular, Docker, PostgresDB, Git, Gitlab, pipeline, CI/CD, Banco de dados Oracle, Spring MVC, Metodologías Agile, Scrum, RabbitMQ"
+    },
+    {
+      "cargo": "Desenvolvedor II",
+      "dataFim": "08/2022",
+      "dataInicio": "06/2022",
+      "descricao": " Desenvolvimento de ERP voltado para indústria. Implementar novas funcionalidades ou requisitos no sistema em desenvolvimento, efetuando testes de unidade e de integração com outras funcionalidades implementadas e deploy de pacotes de sistemas.",
+      "empresa": " Sénior Sistemas",
+      "ferramentas": "Java (versão 8 e 11), Spring boot, Flyway, JUnit, Angular, Docker, PostgresDB, Git, Gitlab, pipeline, CI/CD,Metodologias Agil, Scrum, RabbitMQ ."
+    },
+    {
+      "cargo": "Analista e Desenvolvedor de sistemas",
+      "dataFim": "01/2023",
+      "dataInicio": "08/2022",
+      "descricao": "Sustentação e implantação de sistemas municipais.",
+      "empresa": "AGETEC ",
+      "ferramentas": "Java (versão 6, 7, 8 e 11), Spring boot, Javascript/Typescript, Angular, Docker, Oracle, JSP , ZK, JHipster"
+    },
+    {
+      "cargo": "Desenvolvedor Java",
+      "dataFim": "07/2023",
+      "dataInicio": "02/2023",
+      "descricao": "Desenvolver e implantar sistemas informatizados dimensionando requisitos e funcionalidade do sistema, especificando sua arquitetura, escolhendo ferramentas de desenvolvimento, especificando programas, codificando aplicativos, administrar ambiente informatizado e elaborar documentação técnica.",
+      "empresa": " MJV Technology & Innovation  ( alocado no Bradesco Seguros )",
+      "ferramentas": "Java (versão 6, 7, 8 e 11), Spring boot, Javascript/Typescript ,Angular, Struts, JSP, JSF, Docker, Mysql, SVN, Git, Gitlab,pipeline, CI/CD."
+    },
+    {
+      "cargo": "Analista de desenvolvimento",
+      "dataFim": "12/2023",
+      "dataInicio": "08/2023",
+      "descricao": "Sustentação e implantação de sistemas, atendendo chamado do TCE do mato grosso do sul.",
+      "empresa": "GEOI2 Tecnologia da Informação LTDA",
+      "ferramentas": "Java (versão 17), Bancos de dados relacionais, C#, Javascript/Typescript, AngularJS, Microsoft SQL Server, .NET Framework, ASP.NET, Microsoft Visual Studio, Spring boot, Angular"
+    }
+  ]
+}

@@ -86,7 +86,7 @@ hr {
 }
 
 
-body {}
+
 
 .printarea {
   visibility: visible;
@@ -97,9 +97,15 @@ body {}
   size: A4;
   margin: 0;
   margin-top: 40px;
-
+  color: #d9d7d7 !important;
 }
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    background: #00BAFF; !important;
 
+  }
+}
 * {
   outline: none;
   color-adjust: exact;
