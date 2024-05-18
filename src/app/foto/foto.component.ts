@@ -2,6 +2,10 @@ import {Component, ElementRef, OnInit} from '@angular/core';
 import {DadosPessoa} from "../models/DadosPessoais";
 import {Experiencia} from "../models/Experiencia";
 import {Formacao} from "../models/Formacao";
+// @ts-ignore
+import data from "../../assets/data.json";
+import {Apresentacao} from "../models/Apresentacao";
+import {Qualificacoes} from "../models/qualificacoes";
 
 @Component({
   selector: 'app-foto',
@@ -13,17 +17,22 @@ export class FotoComponent implements OnInit {
   foto: any;
   imageurl: any;
   dadosPessoais: DadosPessoa | undefined;
-  esperiencias : Experiencia[] = [];
-  formacoes: Formacao[] = [];
+  apresentacao: Apresentacao | undefined;
+  esperiencias: Experiencia[] = [];
+  formacoes: Formacao[] = []
+  qualificacoes: Qualificacoes[]=[]
 
 
-  constructor(private elementRef: ElementRef<HTMLElement>) {}
-
-  ngOnInit(){
-   this.setValor();
+  constructor(private elementRef: ElementRef<HTMLElement>) {
   }
 
-  setValor(){
+  ngOnInit() {
+    this.setValor();
+    this.getDados();
+  }
+
+
+  setValor() {
 
     const dados = localStorage.getItem("DadosPessoais");
     this.dadosPessoais = null !== dados ? JSON.parse(dados) : null;
@@ -32,20 +41,29 @@ export class FotoComponent implements OnInit {
     this.formacoes = null !== forma ? JSON.parse(forma) : [];
 
     const exp = localStorage.getItem("experiencia");
-    this.esperiencias = null !== exp? JSON.parse(exp) : [];
-    console.log(this.esperiencias)
+    this.esperiencias = null !== exp ? JSON.parse(exp) : [];
+
+  }
+
+  getDados() {
+    if(!this.apresentacao){
+      this.formacoes = data.formacoes;
+      this.apresentacao = data.apresentacao;
+      this.esperiencias = data.experiencia;
+      this.dadosPessoais = data.dadosPessoais;
+      this.qualificacoes = data.qualificacoes;
+    }
+    console.log(data);
   }
 
   onFileSelected(event: any) {
     console.log(event)
-    const file:File = event.target.files[0];
-    file.arrayBuffer().then(b=> {
+    const file: File = event.target.files[0];
+    file.arrayBuffer().then(b => {
       let base64String = this.arrayBufferToBase64(b);
       this.imageurl = "data:image/jpg;base64," + base64String;
     })
   };
-
-
 
   arrayBufferToBase64(buffer: ArrayBuffer): string {
     let binary = '';
@@ -57,10 +75,8 @@ export class FotoComponent implements OnInit {
     return window.btoa(binary);
   }
 
-
-
   alterar() {
-    const len = (this.esperiencias.length/3);
+    const len = this.apresentacao ?  (this.esperiencias.length / 3) + 1 : (this.esperiencias.length / 3) ;
     const page = 1080;
     return (page * len) + "px";
   }

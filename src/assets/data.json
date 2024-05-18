@@ -1,5 +1,5 @@
 {
-  "DadosPessoais": {
+  "dadosPessoais": {
     "dataDeNascimento": "11/07/1999",
     "email": "julianoosmir@outlook.com",
     "endereco": "Rua Clementina de Jesus Nº 26 Setor 5 conjunto Aero Rancho, Campo Grande MS",
@@ -15,6 +15,49 @@
       "dataDeTermino": "2023-07-22T03:00:00.000Z",
       "grau": "",
       "instituicao": "UNIDERP"
+    }
+  ],
+  "qualificacoes": [
+    {
+      "nome": "java"
+    },
+    {
+      "nome": "Spring boot"
+      
+    },
+    {
+      "nome": "Angular"
+
+    },
+    {
+      "nome": "PostgresDB"
+
+    },
+    {
+      "nome": "Javascript/Typescript"
+
+    },
+    {
+      "nome": "Docker"
+
+    },
+    {
+      "nome": "Git"
+    },
+    {
+      "nome": "Banco de dados Oracle"
+    },
+    {
+      "nome": "ASP.NET"
+
+    },
+    {
+      "nome": "Vue js."
+
+    },
+    {
+      "nome": "SQL Serve"
+
     }
   ],
   "experiencia": [
@@ -66,5 +109,8 @@
       "empresa": "GEOI2 Tecnologia da Informação LTDA",
       "ferramentas": "Java (versão 17), Bancos de dados relacionais, C#, Javascript/Typescript, AngularJS, Microsoft SQL Server, .NET Framework, ASP.NET, Microsoft Visual Studio, Spring boot, Angular"
     }
-  ]
+  ],
+  "apresentacao": {
+    "texto": "Desenvolvedor web fullstack graduado em ciência da computação, com quatro anos de experiência na área de tecnologia e proficiência em projetos utilizando Java e C# no back-end e Frameworks Javascript no front-end"
+  }
 }

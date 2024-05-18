@@ -35,6 +35,17 @@
             <p class="arial-titulo">EMAIL:</p>
             <!--            <a s>Julianoosmir&#64;outlook.com</a>-->
             <a class="site">{{ dadosPessoais?.email }}</a>
+            <div style="margin-top: 100px" *ngIf="qualificacoes">
+              <p class="titulo-direito" style="margin: 10px"><b> Qualificações:</b></p>
+              <hr/>
+              <ul>
+                @for (qualificaco of qualificacoes; track qualificaco.nome) {
+                  <li>
+                    <p class="titulo-direito">{{qualificaco.nome}} </p>
+                  </li>
+                }
+              </ul>
+            </div>
           </div>
           <br/>
           <div id="direito" style="width: 700px;">
@@ -43,6 +54,13 @@
               <p class="titulo-direito"><b> Endereço:</b>  {{ dadosPessoais?.endereco }}</p>
             </div>
             <div>
+            <div *ngIf="apresentacao">
+              <p class="titulo-direito"><b> Apresentação:</b></p>
+              <hr/>
+              <p class="titulo-direito">{{apresentacao.texto}} </p>
+            </div>
+            </div>
+            <div *ngIf="formacoes.length>0">
               <p class="titulo-direito"><b> Formação:</b></p>
               <hr/>
               <ul>
