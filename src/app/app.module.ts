@@ -18,6 +18,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { AccordionModule } from 'primeng/accordion';
 import { InputMaskModule } from 'primeng/inputmask';
 import {SharedModule} from "./shared/shared.module";
+import { LinkedinmodelComponent } from './linkedinmodel/linkedinmodel.component';
 
 
 
@@ -28,6 +29,7 @@ import {SharedModule} from "./shared/shared.module";
     FormacaoComponent,
     ExperienciaComponent,
     FotoComponent,
+    LinkedinmodelComponent,
 
   ],
   imports: [

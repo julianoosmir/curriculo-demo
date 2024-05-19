@@ -1,8 +1,9 @@
-<p>foto works!</p>
+<p>linkedinmodel works!</p>
+
 <div class="card flex flex-column md:flex-row gap-3">
   <div id="wapper" class="card">
     <div class="formulario">
-      <h2> Cadastro <span> Usuario</span></h2>
+      <h2> Cadastro <span> linkedinmodel</span></h2>
       <br/>
       <form id="container" name="signup-form">
         <div>
@@ -13,7 +14,7 @@
         </div>
         <br/>
 
-        <button type="submit" [useExistingCss]="true" styleSheetFile="assets/css/print-pdf.scss"
+        <button type="submit" [useExistingCss]="true" styleSheetFile="assets/css/linkedin.css"
                 mat-fab printSectionId="minimal" ngxPrint class="button">
           Salvar
         </button>
@@ -36,7 +37,7 @@
             <!--            <a s>Julianoosmir&#64;outlook.com</a>-->
             <a class="site">{{ dadosPessoais?.email }}</a>
             <div style="margin-top: 120px" *ngIf="qualificacoes">
-              <p class="titulo-direito" style="margin: 10px"><b> Principais Competências:</b></p>
+              <p class="titulo-direito" style="margin: 10px"><b> Principais Competências :</b></p>
               <hr/>
               <ul>
                 @for (qualificaco of qualificacoes; track qualificaco.nome) {
@@ -65,11 +66,11 @@
               <p class="titulo-direito"><b> Endereço:</b>  {{ dadosPessoais?.endereco }}</p>
             </div>
             <div>
-            <div *ngIf="apresentacao">
-              <p class="titulo-direito"><b> Apresentação:</b></p>
-              <hr/>
-              <p class="titulo-direito">{{apresentacao.texto}} </p>
-            </div>
+              <div *ngIf="apresentacao">
+                <p class="titulo-direito"><b> Apresentação:</b></p>
+                <hr/>
+                <p class="titulo-direito">{{apresentacao.texto}} </p>
+              </div>
             </div>
             <div *ngIf="formacoes.length>0">
               <p class="titulo-direito"><b> Formação:</b></p>

@@ -1,19 +1,19 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
+import {Idiomas} from "../models/Idiomas";
 import {DadosPessoa} from "../models/DadosPessoais";
+import {Apresentacao} from "../models/Apresentacao";
 import {Experiencia} from "../models/Experiencia";
 import {Formacao} from "../models/Formacao";
+import {Qualificacoes} from "../models/qualificacoes";
 // @ts-ignore
 import data from "../../assets/data.json";
-import {Apresentacao} from "../models/Apresentacao";
-import {Qualificacoes} from "../models/qualificacoes";
-import {Idiomas} from "../models/Idiomas";
 
 @Component({
-  selector: 'app-foto',
-  templateUrl: './foto.component.html',
-  styleUrl: './foto.component.css'
+  selector: 'app-linkedinmodel',
+  templateUrl: './linkedinmodel.component.html',
+  styleUrl: './linkedinmodel.component.css'
 })
-export class FotoComponent implements OnInit {
+export class LinkedinmodelComponent implements OnInit{
 
   foto: any;
   imageurl: any;
@@ -83,5 +83,4 @@ export class FotoComponent implements OnInit {
     const page = 1080;
     return (page * len) + "px";
   }
-
 }

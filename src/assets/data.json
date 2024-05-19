@@ -23,7 +23,7 @@
     },
     {
       "nome": "Spring boot"
-      
+
     },
     {
       "nome": "Angular"
@@ -58,6 +58,16 @@
     {
       "nome": "SQL Serve"
 
+    }
+  ],
+  "idiomas": [
+    {
+      "lingua": "Português",
+      "nivel": "nativo"
+    },
+    {
+      "lingua": "Inglês",
+      "nivel": "intermediario"
     }
   ],
   "experiencia": [
@@ -108,9 +118,17 @@
       "descricao": "Sustentação e implantação de sistemas, atendendo chamado do TCE do mato grosso do sul.",
       "empresa": "GEOI2 Tecnologia da Informação LTDA",
       "ferramentas": "Java (versão 17), Bancos de dados relacionais, C#, Javascript/Typescript, AngularJS, Microsoft SQL Server, .NET Framework, ASP.NET, Microsoft Visual Studio, Spring boot, Angular"
+    },
+    {
+      "cargo": "Analista de desenvolvimento de software",
+      "dataInicio": "04/2024",
+      "descricao": "desenvolvimento e manutenção de sistema java e aplicativos móveis.",
+      "empresa": "IBER - Instituto Brasileiro de Energia Reciclável",
+      "ferramentas": "Java (versão 17), Bancos de dados relacionais, Typescript, Angular, MySQL Server, Quarkus, Ionic, Google Cloud Platform Spring boot, Angular"
     }
   ],
   "apresentacao": {
-    "texto": "Desenvolvedor web fullstack graduado em ciência da computação, com quatro anos de experiência na área de tecnologia e proficiência em projetos utilizando Java e C# no back-end e Frameworks Javascript no front-end"
+    "texto": "Desenvolvedor web fullstack graduado em ciência da computação, com quatro anos de experiência na área de tecnologia e proficiência em projetos utilizando Java e C# no back-end e Frameworks Javascript no front-end",
+    "titulo": "Desenvolvedor"
   }
 }
