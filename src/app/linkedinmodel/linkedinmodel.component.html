@@ -23,9 +23,14 @@
         <div class="folha">
           <div id="esquerdo" [ngStyle]="{'height': alterar()}">
             <p-image id="foto" [src]="imageurl" alt="Image" imageClass="redondo"></p-image>
-            <h1 class="nome">{{ dadosPessoais?.nome }}</h1>
+            <div>
+              <p class="titulo-esquerdo"><b> Data de nascimento : </b> </p>
+              <p class="titulo-esquerdo"> {{ dadosPessoais?.dataDeNascimento }} </p>
+              <p class="titulo-esquerdo"><b> Endereço:</b> </p>
+              <p class="titulo-esquerdo">{{ dadosPessoais?.endereco }}</p>
+            </div>
             <br/>
-            <p class="p1 contato"><b>Contato</b></p>
+            <p class="contato"><b>Contato</b></p>
             <hr/>
             <p class="arial-titulo">TELEFONE:</p>
             <p class="arial-titulo">{{ dadosPessoais?.telefone | phone }}</p>
@@ -36,24 +41,23 @@
             <p class="arial-titulo">EMAIL:</p>
             <!--            <a s>Julianoosmir&#64;outlook.com</a>-->
             <a class="site">{{ dadosPessoais?.email }}</a>
-            <div style="margin-top: 120px" *ngIf="qualificacoes">
-              <p class="titulo-direito" style="margin: 10px"><b> Principais Competências :</b></p>
-              <hr/>
+            <div style="margin-top: 200px" *ngIf="qualificacoes">
+              <p class="titulo-esquerdo" style="margin: 10px;"><b> Principais Competências :</b></p>
+
               <ul>
                 @for (qualificaco of qualificacoes; track qualificaco.nome) {
-                  <li>
-                    <p class="titulo-direito">{{qualificaco.nome}} </p>
+                  <li style="color:white;">
+                    <p class="titulo-esquerdo">{{qualificaco.nome}} </p>
                   </li>
                 }
               </ul>
             </div>
             <div style="margin-top: 100px" *ngIf="idiomas">
-              <p class="titulo-direito" style="margin: 10px"><b> Idiomas:</b></p>
-              <hr/>
+              <p class="titulo-esquerdo" style="margin: 10px"><b> Idiomas:</b></p>
               <ul>
                 @for (idioma of idiomas; track idioma.lingua) {
-                  <li>
-                    <p class="titulo-direito">{{idioma.lingua}} - {{idioma.nivel}} </p>
+                  <li style="color: white">
+                    <p class="titulo-esquerdo">{{idioma.lingua}} - {{idioma.nivel}} </p>
                   </li>
                 }
               </ul>
@@ -61,10 +65,8 @@
           </div>
           <br/>
           <div id="direito" style="width: 700px;">
-            <div>
-              <p class="titulo-direito"><b> Data de nascimento: </b> {{ dadosPessoais?.dataDeNascimento }} </p>
-              <p class="titulo-direito"><b> Endereço:</b>  {{ dadosPessoais?.endereco }}</p>
-            </div>
+            <h1 class="nome">{{ dadosPessoais?.nome }}</h1>
+
             <div>
               <div *ngIf="apresentacao">
                 <p class="titulo-direito"><b> Apresentação:</b></p>
